@@ -39,12 +39,14 @@ services:
       SR_KAFKASTORE_CONNECTION_URL: "confluent:2181"
     network_mode: "host"
   elasticsearch:
-      image: elasticsearch
-      ports:
-        - "9200:9200"
-        - "9300:9300"
+    image: elasticsearch
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    network_mode: "host"
   connect:
     image: connect-es
     depends_on:
       - kafka
       - elasticsearch
+    network_mode: "host"
