@@ -45,7 +45,7 @@ services:
       - "9300:9300"
     network_mode: "host"
   connect:
-    image: connect-es
+    image: connect-es-dist
     depends_on:
       - kafka
       - elasticsearch

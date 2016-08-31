@@ -4,4 +4,4 @@ docker-compose up -d kafka
 docker-compose up -d schema-registry
 docker-compose up -d rest-proxy
 docker-compose up -d elasticsearch
-
+docker-compose up connect
