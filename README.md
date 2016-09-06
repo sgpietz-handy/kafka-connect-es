@@ -16,7 +16,7 @@ update config for connector
 
 `curl -H "Content-Type: application/json" -X PUT -d '{ "connector.class": "io.confluent.connect.elasticsearch.ElasticsearchSinkConnector", "tasks.max": "3", "topics": "test-elasticsearch-sink,mytopic", "key.ignore": "true", "connection.url": "http://confluent:9200", "type.name": "kafka-connect" }' http://confluent:8083/connectors/elasticsearch-sink/config`
 
-send messages into kafka using
+send messages into kafka using kafka-avro-console producer (requires downloading confluent platform download)
 
 ```
 kafka-avro-console-producer --broker-list localhost:9092 --topic test-elasticsearch-sink --property value.schema='{"type":"record","name":"myrecord","fields":[{"name":"f1","type":"string"}]}'
