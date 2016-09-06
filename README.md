@@ -2,7 +2,7 @@
 
 build docker image for kafka-connect-elasticsearch
 
-`docker build -t connect-es-dist .`
+`./build.sh`
 
 start containters
 

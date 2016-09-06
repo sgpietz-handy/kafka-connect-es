@@ -1,6 +1,6 @@
 FROM confluent/platform
 
-COPY kafka-connect-elasticsearch /usr/share/java/kafka-connect-elasticsearch
+COPY kafka-connect-elasticsearch/target/kafka-connect-elasticsearch-3.1.0-SNAPSHOT-package/share/java/kafka-connect-elasticsearch /usr/share/java/kafka-connect-elasticsearch
 
 RUN ["mkdir", "/etc/kafka-connect-elasticsearch"]
 RUN ["chown", "-R", "confluent:confluent", "/etc/kafka-connect-elasticsearch/", "/tmp/"]
