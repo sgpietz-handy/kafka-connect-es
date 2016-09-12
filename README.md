@@ -1,5 +1,7 @@
 # kafka-connect-es
 
+To start, get your docker env setup for this project by following the intructions under Docker Compose in the README here: https://github.com/confluentinc/docker-images
+
 build docker image for kafka-connect-elasticsearch
 
 `./build.sh`
